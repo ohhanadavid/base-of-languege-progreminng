@@ -1,0 +1,9 @@
+C:\Users\David Ohhana\Desktop\College\base of porgrmining lnguege\ex0\ex0\bin\Debug\ex0.exe
+C:\Users\David Ohhana\Desktop\College\base of porgrmining lnguege\ex0\ex0\bin\Debug\ex0.pdb
+C:\Users\David Ohhana\Desktop\College\base of porgrmining lnguege\ex0\ex0\bin\Debug\Nemerle.dll
+C:\Users\David Ohhana\Desktop\College\base of porgrmining lnguege\ex0\ex0\bin\Debug\Nemerle.xml
+C:\Users\David Ohhana\Desktop\College\base of porgrmining lnguege\ex0\ex0\obj\Debug\ex0.nproj.CoreCompileInputs.cache
+C:\Users\David Ohhana\Desktop\College\base of porgrmining lnguege\ex0\ex0\obj\Debug\ex0.nproj.CopyComplete
+C:\Users\David Ohhana\Desktop\College\base of porgrmining lnguege\ex0\ex0\obj\Debug\ex0.exe
+C:\Users\David Ohhana\Desktop\College\base of porgrmining lnguege\ex0\ex0\obj\Debug\ex0.pdb
+C:\Users\David Ohhana\Desktop\College\base of porgrmining lnguege\ex0\ex0\obj\Debug\ex0.nprojAssemblyReference.cache

@@ -1,0 +1,85 @@
+﻿using Nemerle.Collections;
+using Nemerle.Text;
+using Nemerle.Utility;
+using Nemerle.Imperative;
+using System;
+using System.Collections.Generic;
+using System.Collections.Generic.Dictionary;
+using System.Console;
+using System.Linq;
+using System.IO;
+
+module Program
+{
+  public Path = @"C:\Users\David Ohhana\Desktop\College\base of porgrmining lnguege\ex0_fiels";
+  public file_asm= StreamWriter(@"C:\Users\David Ohhana\Desktop\College\base of porgrmining lnguege\ex0_fiels\\ex0_files.asm");  
+  public mutable sum_buying:double=0;
+  public mutable sum_celling:double=0;
+  
+  HandleBuy(productName:string,amount:int,price:double):void
+  {
+      def sum=amount*price;
+      file_asm.WriteLine("### BUY "+ productName+" ###");
+      file_asm.WriteLine(sum );
+      sum_buying=sum_buying+sum;
+           
+  }
+  
+    HandleCell(productName:string,amount:int,price:double):void
+  {
+      def sum = amount*price;
+      file_asm.WriteLine("### CELL "+ productName+" ###");
+      file_asm.WriteLine( amount*price);
+      sum_celling+=sum;     
+  }
+  
+  Main() : void
+  {    
+  
+    
+    foreach (file in System.IO.Directory.GetFiles(Path,"*vm"))
+    {
+        mutable f=StreamReader (file);
+
+        
+        
+        mutable line = f.ReadLine();
+        while(line != null)
+        { 
+           def a= line.Split(' ');
+           mutable amount:int = 0;
+           mutable price:double=0;
+           try{
+                 amount=int.Parse(a[2]);
+                 price=double.Parse(a[3]);
+            }
+            catch{
+                e is System.FormatException => continue 
+            }
+           
+        
+           match(a[0])
+           {
+               "buy"=>
+                   HandleBuy(a[1],amount,price)
+               |"Buy"=>
+                   HandleBuy(a[1],amount,price)
+               |"CELL"=>
+                    HandleCell(a[1],amount,price)
+               |"cell"=>
+                    HandleCell(a[1],amount,price)
+           
+           }
+            
+            
+           line = f.ReadLine();
+        }
+         
+    };
+    file_asm.WriteLine("TOTAL BUY: "+ sum_buying);
+    file_asm.WriteLine("TOTAL CELL: "+ sum_celling);
+    file_asm.Close();
+    WriteLine("bye");
+ 
+  }
+}
